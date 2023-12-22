@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="lib.js" defer></script>
+</head>
+<body>
+    <!-- npx tailwindcss -i ./src/input.css -o ./styles.css --watch -->
+    <div class="flex flex-col min-h-screen font-mono break-words">
+        <header class="flex justify-between items-center px-6 bg-gray-900 h-32 text-white shadow-lg shadow-gray-500 relative">
+            <h1 class="font-extrabold text-5xl">library</h1>
+            <a class="font-bold text-base bg-gray-500 px-4 py-3 rounded-lg hover:bg-gray-400" href="index.html">Login</a>
+        </header>
+
+        <main class="flex-1 py-8 bg-yellow-200">
+            <div class="flex justify-center">
+                <a class="font-bold text-base bg-gray-500 px-4  py-3 rounded-lg hover:bg-gray-400 text-white" href="index.html">Add Book</a>
+            </div>
+            <!-- Set maximum number of characters on title and author to avoid overflow -->
+            <div class="card-grid grid auto-rows-auto p-5 gap-5">
+                <div class="card grid grid-cols-1 gap-3 p-4 bg-gray-100 rounded-lg min-h-0">
+                    <p class="flex-1 px-8">Title:fawfawfawfawfawfwafawfawfawfawfawfafwfawfawfawfa</p>
+                    <p class="flex-1  px-8 ">Author:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgaw</p>
+                    <p class="flex-1  px-8 ">Pages:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgaw</p>
+                    <button class="flex-1 bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
+                    <button class="flex-1 bg-red-500  hover:bg-red-400 rounded-xl">Remove</button>
+                </div>
+
+                <div class="card grid grid-cols-1 gap-3 p-4 bg-gray-100 rounded-lg min-h-0">
+                    <p class="flex-1 px-8">Title:fawfawfawfawfawfwafawfawfawfawfawfafwfawfawfawfa</p>
+                    <p class="flex-1  px-8 ">Author:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwg</p>
+                    <p class="flex-1  px-8 ">Pages:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgaw</p>
+                    <button class="flex-1 bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
+                    <button class="flex-1 bg-red-500  hover:bg-red-400 rounded-xl">Remove</button>
+                </div>
+
+                
+            </div>
+
+        </main>
+
+        <footer class="flex justify-center p-2 font-bold text-xs bg-gray-500 text-white">
+            Copyright © Amir Getalado 2023
+        </footer>
+    </div>
+</body>
+</html>
+
