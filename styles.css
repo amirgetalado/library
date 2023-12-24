@@ -593,8 +593,8 @@ video {
   min-height: 100vh;
 }
 
-.w-72 {
-  width: 18rem;
+.w-80 {
+  width: 20rem;
 }
 
 .w-full {
@@ -850,7 +850,7 @@ video {
 }
 
 #dialogBox::backdrop{
-  background-color: rgba(155, 155, 155, 0.6);
+  background-color: rgba(34, 34, 34, 0.7);
 }
 
 @media (max-width: 768px) {
