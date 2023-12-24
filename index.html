@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css" />
     <script src="lib.js" defer></script>
 </head>
@@ -17,28 +18,51 @@
 
         <main class="flex-1 py-8 bg-yellow-200">
             <div class="flex justify-center">
-                <button class="font-bold text-base bg-gray-500 px-4  py-3 rounded-lg hover:bg-gray-400 text-white outline-none">Add Book</button>
+                <button class="add font-bold text-base bg-gray-500 px-4  py-3 rounded-lg hover:bg-gray-400 text-white outline-none">Add Book</button>
             </div>
             <!-- Set maximum number of characters on title and author to avoid overflow -->
             <div class="card-grid grid auto-rows-auto p-5 gap-5">
-                <div class="card grid grid-cols-1 gap-3 p-4 bg-gray-100 rounded-lg min-h-0">
-                    <p class="flex-1 px-8">Title:fawfawfawfawfawfwafawfawfawfawfawfafwfawfawfawfa</p>
-                    <p class="flex-1  px-8 ">Author:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgaww</p>
-                    <p class="flex-1  px-8 ">Pages:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgaw</p>
-                    <button class="flex-1 bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
-                    <button class="flex-1 bg-red-500  hover:bg-red-400 rounded-xl">Remove</button>
-                </div>
-
-                <div class="card grid grid-cols-1 gap-3 p-4 bg-gray-100 rounded-lg min-h-0">
-                    <p class="flex-1 px-8">Title:fawfawfawfawfawfwafawfawfawfawfawfafwfawfawfawfa</p>
-                    <p class="flex-1  px-8 ">Author:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwg</p>
-                    <p class="flex-1  px-8 ">Pages:fgawgawgagawgawgawgawfawfawfgawgawgagawgawgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgawwgawgaw</p>
-                    <button class="flex-1 bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
-                    <button class="flex-1 bg-red-500  hover:bg-red-400 rounded-xl">Remove</button>
+                <div class="card grid grid-cols-1 gap-3 px-6 py-7 bg-gray-100 rounded-lg shadow-lg shadow-gray-900
+                ">
+                    <p class="p-3">Title: The Chronicles of Narnia</p>
+                    <p class="p-3">Author: Amir GetaladoAmir GetaladoAmir GetaladoAmir GetaladoAmir GetaladoAmir</p>
+                    <p class="p-3">Pages: 20</p>
+                    <button class="bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
+                    <button class="bg-red-500  hover:bg-red-400 rounded-xl">Remove</button>
                 </div>
 
                 
-            </div>
+
+                
+            </div> 
+
+            <dialog id="addBookDialog">
+                <form action="index.html" method="post"
+                class="w-72 h-96 flex flex-col px-5 py-6 bg-gray-100 m-auto gap-4 rounded-xl">
+                    <h2 class="flex justify-center font-extrabold">-----Add a new book-----</h2>
+                    <div class="flex-1 relative mt-4">
+                        <input type="text" id="title" name="title" maxlength="50" placeholder="Title"
+                        class="peer w-full border-b placeholder:text-transparent px-3 py-2 focus:outline-none"/>
+                        <label for="title" class="absolute left-0 ml-1 -translate-y-3 bg-white px-4 font-extrabold text-sm  text-gray-600  duration-100 ease-linear peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:ml-1 peer-focus:-translate-y-3 peer-focus:px-4 peer-focus:text-sm">Title</label>
+                    
+                    </div>
+                    <div class="flex-1 relative mt-4">
+                    
+                        <input type="text" id="author" name="author" maxlength="50" placeholder="author" class="peer w-full border-b placeholder:text-transparent px-3 py-2 focus:outline-none"/>
+                        <label for="author" class="absolute left-0 ml-1 -translate-y-3 bg-white px-4 font-extrabold text-sm text-gray-600 duration-100 ease-linear peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:ml-1 peer-focus:-translate-y-3 peer-focus:px-4 peer-focus:text-sm">Author </label>
+                    </div>
+                    <div class="flex-1 relative mt-4">
+                        <input type="number" id="pages" name="pages" min="1" max="9999" placeholder="1" class="peer w-full border-b placeholder:text-transparent px-3 py-2 focus:outline-none"/>
+                        <label for="pages" class="absolute left-0 ml-1 -translate-y-3 bg-white px-4 font-extrabold text-sm text-gray-600 duration-100 ease-linear peer-placeholder-shown:translate-y-3 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-focus:ml-1 peer-focus:-translate-y-3 peer-focus:px-4 peer-focus:text-sm">Pages </label>
+                    </div>
+                    <div class="flex-1 mx-auto">
+                        <label for="read">Have you read it?</label>
+                        <input type="checkbox" id="read" name="read" class="focus:outline-none"/>
+                    </div class="flex-1">
+                    <button class="py-2 bg-green-500 hover:bg-green-400 rounded-xl focus:outline-none">Add</button>
+                </form>
+            </dialog>
+            <div id="overlay"></div>
 
         </main>
 
