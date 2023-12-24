@@ -13,27 +13,25 @@
     <div class="flex flex-col min-h-screen font-mono break-words">
         <header class="flex justify-between items-center px-6 bg-gray-900 h-32 text-white shadow-lg shadow-gray-500 relative">
             <h1 class="font-extrabold text-5xl">library</h1>
-            <a class="font-bold text-base bg-gray-500 px-4 py-3 rounded-lg hover:bg-gray-400" href="index.html">Login</a>
+            <a class="font-bold text-lg bg-gray-500 px-4 py-2 rounded-lg hover:bg-gray-400" href="index.html">Login</a>
         </header>
 
         <main class="flex-1 py-8 bg-yellow-200">
             <div class="flex justify-center">
-                <button class="addBookBtn font-bold text-base bg-gray-500 px-4  py-3 rounded-lg hover:bg-gray-400 text-white outline-none">Add Book</button>
+                <button class="addBookBtn font-bold text-lg bg-gray-500 px-4  py-3 rounded-lg hover:bg-gray-400 text-white outline-none">Add Book</button>
             </div>
             <!-- Set maximum number of characters on title and author to avoid overflow -->
             <div class="card-grid grid auto-rows-auto p-5 gap-5">
+
                 <div class="card grid grid-cols-1 gap-3 px-6 py-7 bg-gray-100 rounded-lg shadow-lg shadow-gray-900
                 ">
-                    <p class="p-3">Title: The Chronicles of Narnia</p>
-                    <p class="p-3">Author: 123456789012345 678901234567890123 45678901234567890</p>
-                    <p class="p-3">Pages: 20</p>
-                    <button class="bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
-                    <button class="bg-red-500  hover:bg-red-400 rounded-xl">Remove</button>
+                    <p class="p-3 font-semibold text-base">Title: The Chronicles of Narnia</p>
+                    <p class="p-3 font-bold text-base">Author: 123456789012345 678901234567890123 45678901234567890</p>
+                    <p class="p-3 font-extrabold text-base">Pages: 20</p>
+                    <button class="font-bold text-lg text-white bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
+                    <button class="font-bold text-lg text-white bg-gray-500  hover:bg-gray-400 rounded-xl">Remove</button>
                 </div>
 
-                
-
-                
             </div> 
            
             <dialog id="dialogBox" class="rounded-xl p-0 ">
