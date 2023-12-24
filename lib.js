@@ -9,7 +9,6 @@ addBookBtn.addEventListener('click', () => {
     dialogBox.showModal();//shows the dialogBox when Add Book btn is clicked
 });
 
-
 function closeDialog(event){
     if(!event.target.contains(dialogBox)) return;
     dialogBox.close();
