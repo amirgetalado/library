@@ -4,33 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
-    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/fav.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css" />
     <script src="lib.js" defer></script>
 </head>
 <body>
     <!-- npx tailwindcss -i ./src/input.css -o ./styles.css --watch -->
-    <div class="flex flex-col min-h-screen font-mono break-words">
-        <header class="flex justify-between items-center px-6 bg-gray-900 h-32 text-white shadow-lg shadow-gray-500 relative">
+    <div class="flex flex-col min-h-screen font-mono break-words ">
+        <header class="flex justify-between items-center px-6 bg-gray-900 h-32 text-white shadow-lg shadow-gray-500 relative md:px-20">
             <h1 class="font-extrabold text-5xl">library</h1>
             <a class="font-bold text-lg bg-gray-500 px-4 py-2 rounded-lg hover:bg-gray-400" href="index.html">Login</a>
         </header>
 
-        <main class="flex-1 py-8 bg-yellow-200">
+        <main class="flex-1 py-8 bg-yellow-200 md:px-20">
             <div class="flex justify-center">
                 <button class="addBookBtn font-bold text-lg bg-gray-500 px-4  py-3 rounded-lg hover:bg-gray-400 text-white outline-none">Add Book</button>
             </div>
             <!-- Set maximum number of characters on title and author to avoid overflow -->
             <div class="card-grid grid auto-rows-auto p-5 gap-5">
-
-                <div class="card grid grid-cols-1 gap-3 px-6 py-7 bg-gray-100 rounded-lg shadow-lg shadow-gray-900
-                ">
-                    <p class="p-3 font-semibold text-base">Title: The Chronicles of Narnia</p>
-                    <p class="p-3 font-bold text-base">Author: 123456789012345 678901234567890123 45678901234567890</p>
-                    <p class="p-3 font-extrabold text-base">Pages: 20</p>
-                    <button class="font-bold text-lg text-white bg-green-500 hover:bg-green-400 rounded-xl">Read</button>
-                    <button class="font-bold text-lg text-white bg-gray-500  hover:bg-gray-400 rounded-xl">Remove</button>
-                </div>
 
             </div> 
            
@@ -67,4 +58,3 @@
     </div>
 </body>
 </html>
-
