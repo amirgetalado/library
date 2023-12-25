@@ -11,7 +11,7 @@ let author;
 let page;
 let read;
 let newBook;
-const library = [];
+const library = [];//will contain the books that the user will input
 
 addBookBtn.addEventListener('click', () => {
     //for clearing the input area from previous entries
@@ -119,5 +119,3 @@ function createCard(newBook){
     });
  
 }
-
-
