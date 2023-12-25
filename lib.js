@@ -35,7 +35,7 @@ addBtn.addEventListener('click', () => {
     page = document.querySelector('#pages').value;
     read = document.querySelector('#read').checked;
 
-    if (title === '' || author === '' || page === '') {
+    if (title === '' || author === '' || page === '' || page <= 0 || page > 9999) {
        
         return;//exits the eventlistener if the three fields are empty and doesnt let it create a book and a card
     }
@@ -46,7 +46,7 @@ addBtn.addEventListener('click', () => {
 });
 
 
-
+//constructor for Book
 function Book(title,author,page,read){
     this.title = title;
     this.author = author;
@@ -88,39 +88,36 @@ function createCard(newBook){
     removeBtn.classList.add('removeBtn','text-lg','font-bold','text-white','bg-gray-500' , 'hover:bg-gray-400' , 'rounded-xl');
     removeBtn.innerText = `Remove`
     div.appendChild(removeBtn);
+
+    // Add event listener to readBtn
+    readBtn.addEventListener('click', () => {
+        readBtn.classList.toggle('hasReadBtn');
+        readBtn.classList.toggle('notReadBtn');
+        readBtn.classList.toggle('bg-green-500');
+        readBtn.classList.toggle('bg-red-500');
+        readBtn.classList.toggle('hover:bg-green-400');
+        readBtn.classList.toggle('hover:bg-red-400');
+
+        // Toggle read status in the newBook object
+        newBook.read = !newBook.read;//Changes the current value of newBook.read with toggle, if it is true, it will be false, and vice versa
+
+        //Update innerText of readBtn
+        if(readBtn.innerText === 'Read'){
+            readBtn.innerText = 'Not Read';
+        }else{
+            readBtn.innerText = 'Read';
+        }
+    });
+
+    // Add event listener to removeBtn
+    removeBtn.addEventListener('click', () => {
+        div.remove(); // Remove the card element from the DOM
+        const index = library.indexOf(newBook);
+        if (index !== -1) {
+        library.splice(index, 1); // Remove the newBook object from the library array
+        }
+    });
+ 
 }
 
-// let hasRead = document.querySelector('.hasReadBtn');
-// let notRead = document.querySelector('.notReadBtn');
-
-// hasRead.addEventListener('click', () => {
-    // hasReadBtn.classList.replace('hasReadBtn', 'notReadBtn');
-    // hasReadBtn.classList.replace('bg-green-500','bg-red-500');
-    // hasReadBtn.classList.replace('hover:bg-green-400','hover:bg-red-400');
-// });
-
-// notRead.addEventListener('click', () => {
-//     notReadBtn.classList.replace('notReadBtn', 'hasReadBtn');
-//     notReadBtn.classList.replace('bg-red-500','bg-green-500');
-//     notReadBtn.classList.replace('hover:bg-red-400','hover:bg-green-400');
-// });
-
-// let hasReadBtns = document.querySelectorAll('.hasReadBtn');
-// let notReadBtns = document.querySelectorAll('.notReadBtn');
-
-// hasReadBtns.forEach((hasReadBtn) => {
-//   hasReadBtn.addEventListener('click', () => {
-//     hasReadBtn.classList.replace('hasReadBtn', 'notReadBtn');
-//     hasReadBtn.classList.replace('bg-green-500', 'bg-red-500');
-//     hasReadBtn.classList.replace('hover:bg-green-400', 'hover:bg-red-400');
-//   });
-// });
-
-// notReadBtns.forEach((notReadBtn) => {
-//   notReadBtn.addEventListener('click', () => {
-//     notReadBtn.classList.replace('notReadBtn', 'hasReadBtn');
-//     notReadBtn.classList.replace('bg-red-500', 'bg-green-500');
-//     notReadBtn.classList.replace('hover:bg-red-400', 'hover:bg-green-400');
-//   });
-// });
 
